@@ -25,5 +25,5 @@ Things you may want to cover:
 
 development
 
-feature branch
+feature-branch
 
