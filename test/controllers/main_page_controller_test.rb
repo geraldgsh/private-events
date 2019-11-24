@@ -2,7 +2,7 @@ require 'test_helper'
 
 class MainPageControllerTest < ActionDispatch::IntegrationTest
   def setup
-    @base_title = "Event Planning App"
+    @base_title = "Eventbrite App"
   end
 
   test "should get root" do
