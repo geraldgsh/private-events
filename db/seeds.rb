@@ -5,3 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.create!(name:  "flash",
+             email: "flash@email.com")
+
+59.times do |n|
+  name  = Faker::Name.name
+  email = "dc-#{n+1}@email.com"
+  User.create!(name:  name,
+               email: email)
+end
