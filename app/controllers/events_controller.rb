@@ -4,7 +4,7 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = curreant_user.events.build(event_params)
+    @event = current_user.events.build(event_params)
     if @event.save
       redirect_to event_path(@event)
     else
@@ -18,7 +18,7 @@ class EventsController < ApplicationController
   end
 
   def index
-    # @events = Event.paginate(page: params[:page]).per_page(10)
+    @events = Event.paginate(page: params[:page]).per_page(10)
     @events_upcoming = Event.upcoming.paginate(page: params[:upcoming])
     @events_past = Event.past.paginate(page: params[:past])
   end
